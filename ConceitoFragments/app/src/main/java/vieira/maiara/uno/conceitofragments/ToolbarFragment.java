@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ import android.widget.TextView;
 
 
 public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChangeListener {
-
+    public static final String TAG = "ToolBar Fragment";
     private EditText edtTexto;
     private SeekBar skbFormatarTexto;
     private Button btnTexto;
@@ -58,7 +59,10 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
             }
         });
 
-        return inflater.inflate(R.layout.fragment_toolbar, container, false);
+        skbFormatarTexto.setOnSeekBarChangeListener((SeekBar.OnSeekBarChangeListener) this);
+
+        return view;
+
     }
 
     @Override
@@ -84,19 +88,21 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
     }
 
     @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
-        skbProgress = progress;
+        textSize = i;
 
     }
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
 
+
     }
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
+        Log.d(TAG, "onStartTrackingTouch: executou o método quando tirou-se o dedo de cima da view. No caso seekbar.");
 
     }
 }
