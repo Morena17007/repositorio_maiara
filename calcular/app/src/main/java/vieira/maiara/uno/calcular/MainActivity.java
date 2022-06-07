@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    private static final String TAG = "MainActivity" ;
+    private static final String TAG = "MainActivity";
     private TextView tvOpcao;
     private Spinner spiOpcoes;
     //private TextView tvOperacao;
@@ -62,27 +62,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spiOpcoes.setAdapter(adapterOperacoesMatematicas);
         spiOpcoes.setOnItemSelectedListener(this);
 
-        String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
-
-
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Pega a opção selecionada no SPINNER
 
+                String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
+
                 if (opcaoSelecionada == DIVISAO) {
 
-                }
+                }else if(opcaoSelecionada == SOMA){
 
-                if(opcaoSelecionada == SOMA){
+                }else if(opcaoSelecionada == MULTIPLICACAO){
 
-                }
+                }else if (opcaoSelecionada == SUBTRACAO){
 
-                if(opcaoSelecionada == MULTIPLICACAO){
+                }else{
 
-                }
-
-                if (opcaoSelecionada == SUBTRACAO){
+                    //Toast.makeText(MainActivity.this, "Por favor, selecione u ")
 
                 }
             }
@@ -97,15 +94,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if(adapterView.getItemAtPosition(i).toString().equals(DIVISAO) ){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_divisao , getTheme()));
+            imgvOperacao.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(MULTIPLICACAO) ){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_multiplica, getTheme()));
+            imgvOperacao.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SOMA)){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_soma , getTheme()));
+            imgvOperacao.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SUBTRACAO)){
             imgvOperacao.setImageDrawable(getResources().getDrawable(R.drawable.ic_subtracao, getTheme()));
+            imgvOperacao.setVisibility(View.VISIBLE);
 
         }else{
             Log.d(TAG, "Nenhuma operação matemática foi selecionada");
@@ -117,5 +118,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    private String somar(){
+        String resultado ="";
+        int n1
+
+        return resultado;
     }
 }
