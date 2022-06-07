@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Calcular</string>
+    <string name="app_name"></string>
+   <string-array name="operacoes_matematicas">
+       <item></item>
+       <item>Soma</item>
+       <item>Subtração</item>
+       <item>Multiplicação</item>
+       <item>Divisão</item>
+
+   </string-array>
+
 </resources>

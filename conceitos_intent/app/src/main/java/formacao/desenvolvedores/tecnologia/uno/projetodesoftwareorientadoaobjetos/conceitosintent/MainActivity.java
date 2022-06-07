@@ -86,10 +86,6 @@ public class MainActivity extends AppCompatActivity {
     short valorShort = 1000;
     Log.d(TAG, "Valor convertido de tipos primitivos short p/ int: " + UtilsApp.convertToInt(valorShort));
 
-    //Log.d(TAG, "Valor convertido de tipos primitivos  p/ int: " + utilsApp.convertToInt(valorLong));
-
-
-
 
     }
 
