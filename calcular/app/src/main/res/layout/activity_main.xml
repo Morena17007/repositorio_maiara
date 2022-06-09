@@ -96,10 +96,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:shadowColor="#92ED98B5"
+        android:outlineAmbientShadowColor="#92ED98B5"
         android:text="Calcular"
+        app:iconTint="#E91E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgvIgual" />
+        app:layout_constraintTop_toBottomOf="@+id/imgvIgual"
+        app:strokeColor="#E91E63" />
 
     <Button
         android:id="@+id/btnLimpar"

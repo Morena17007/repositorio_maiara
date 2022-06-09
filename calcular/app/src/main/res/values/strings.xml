@@ -6,6 +6,10 @@
        <item>Subtração</item>
        <item>Multiplicação</item>
        <item>Divisão</item>
+       <item>Potenciade10</item>
+       <item>RaizQuadrada</item>
+       <item>Potenciacao</item>
+       <item>Logaritmo</item>
 
    </string-array>
 
